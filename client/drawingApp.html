@@ -1,0 +1,95 @@
+<head>
+  <title>1-wall</title>
+</head>
+
+<body>
+  {{> wall}}
+</body>
+
+<template name="wall">
+
+  <h1>{{title}}</h1>
+  <button class='clear btn btn-danger'>Clear</button>
+  <button class='thicker btn btn-primary'>Thicker</button>
+  <button class='thinner btn btn-success'>Thinner</button>
+	
+  <input type="text" class="span2" value="" data-slider-min="-20" data-slider-max="20" data-slider-step="1" data-slider-value="-14" 
+	data-slider-orientation="vertical" data-slider-selection="after" data-slider-tooltip="hide" />
+
+{{> color_buttons}}
+{{> canvas}}
+
+</template>
+
+<template name="canvas">
+  <div id='canvas'></div>
+</template>
+
+<template name="color_buttons">
+	<div class="row js-color-buttons">
+	    <div class="col-md-6 color-buttons">
+		<div class="col-xs-1 js-color-black">
+			<span>&nbsp;</span>
+		</div>
+		<div class="col-xs-1 js-color-blue">
+			<span>&nbsp;</span>
+		</div>
+		<div class="col-xs-1 js-color-brown">
+			<span>&nbsp;</span>
+		</div>
+		<div class="col-xs-1 js-color-cyan">
+			<span>&nbsp;</span>
+		</div>
+		<div class="col-xs-1 js-color-green">
+			<span>&nbsp;</span>
+		</div>
+		<div class="col-xs-1 js-color-grey">
+			<span>&nbsp;</span>
+		</div>
+		<div class="col-xs-1 js-color-orange">
+			<span>&nbsp;</span>
+		</div>
+		<div class="col-xs-1 js-color-pink">
+			<span>&nbsp;</span>
+		</div>
+	    </div>
+	    <div class="col-md-6 color-buttons">
+		<div class="col-xs-1 js-color-chocolate">
+			<span>&nbsp;</span>
+		</div>
+		<div class="col-xs-1 js-color-lime">
+			<span>&nbsp;</span>
+		</div>
+		<div class="col-xs-1 js-color-darkblue">
+			<span>&nbsp;</span>
+		</div>
+		<div class="col-xs-1 js-color-firebrick">
+			<span>&nbsp;</span>
+		</div>
+		<div class="col-xs-1 js-color-purple">
+			<span>&nbsp;</span>
+		</div>
+		<div class="col-xs-1 js-color-red">
+			<span>&nbsp;</span>
+		</div>
+		<div class="col-xs-1 js-color-white">
+			<span>&nbsp;</span>
+		</div>
+		<div class="col-xs-1 js-color-yellow">
+			<span>&nbsp;</span>
+		</div>
+		<div class="col-xs-1 js-color-indigo">
+			<span>&nbsp;</span>
+		</div>
+		<div class="col-xs-1 js-color-navy">
+			<span>&nbsp;</span>
+		</div>
+		<div class="col-xs-1 js-color-orangered">
+			<span>&nbsp;</span>
+		</div>
+		<div class="col-xs-1 js-color-salmon">
+			<span>&nbsp;</span>
+		</div>
+	    </div>
+	</div>
+</template>
