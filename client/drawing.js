@@ -19,6 +19,7 @@ Canvas = function () {
       self.clear();
       return;
     }
+    var straight_line = Session.get('straight-line');
     if (svg) {
 
         // Remember to format the data properly in markPoints
@@ -31,16 +32,31 @@ Canvas = function () {
         // .attr('cy', function (d) { return d.y; });
 
       //to draw a line
-      svg.selectAll('line').data(data, function(d) { return d._id; })
-      .enter().append('line')
-      .attr('x1', function (d) { return d.x; })
-      .attr('y1', function (d) { return d.y; })
-      .attr('x2', function (d) { return d.x1; })
-      .attr('y2', function (d) { return d.y1; })
-      .attr("stroke-width", function (d) { return d.w; })
-      .attr("stroke", function (d) { return d.c; })
-      .attr("stroke-linejoin", "round");
-
+	if (straight_line) {
+		console.log('NO dibujando ...');
+	      svg.selectAll('line').data(data, function(d) { return d._id; })
+	      .enter().append('line')
+	      .attr('x1', function (d) { return d.x; })
+	      .attr('y1', function (d) { return d.y; })
+	      .attr('x2', function (d) { return d.x1; })
+	      .attr('y2', function (d) { return d.y1; })
+	      .attr("stroke-width", function (d) { return d.w; })
+	      .attr("stroke", function (d) { return d.c; })
+	      .attr("stroke-linejoin", "round");
+		}
+	else {
+		console.log('dibujando ...');
+	      svg.selectAll('line').data(data, function(d) { return d._id; })
+	      .enter().append('line')
+	      .style("stroke-dasharray", ("3, 3"))
+	      .attr('x1', function (d) { return d.x; })
+	      .attr('y1', function (d) { return d.y; })
+	      .attr('x2', function (d) { return d.x1; })
+	      .attr('y2', function (d) { return d.y1; })
+	      .attr("stroke-width", function (d) { return d.w; })
+	      .attr("stroke", function (d) { return d.c; })
+	      .attr("stroke-linejoin", "round");
+		}
 
     } // end of the if(svg) statement
   }; // end of the canvas.draw function

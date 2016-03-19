@@ -1,3 +1,10 @@
+.col-md-4 {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.col-xs-2 {
+	height: 30px;
+}
 .js-color-yellow {
 	background-color: yellow;
 }
@@ -63,7 +70,4 @@
 	margin-top: 20px;
 	margin-left: 10px;
 	margin-right: 10px;
-}
-.color-buttons {
-	height: 75px;
 }

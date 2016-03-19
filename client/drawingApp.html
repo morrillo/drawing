@@ -10,12 +10,13 @@
 
   <h1>{{title}}</h1>
   <button class='clear btn btn-danger'>Clear</button>
-  <button class='thicker btn btn-primary'>Thicker</button>
-  <button class='thinner btn btn-success'>Thinner</button>
+  <button class='thicker10x btn btn-primary'>10x Thicker</button>
+  <button class='thicker btn btn-info'>Thicker</button>
+  <button class='thinner10x btn btn-success'>10x Thinner</button>
+  <button class='thinner btn btn-warning'>Thinner</button>
+  <button class='straight-line btn btn-default'>Straight Line</button>
+  <button class='dashed-line btn btn-link'>Dashed Line</button>
 	
-  <input type="text" class="span2" value="" data-slider-min="-20" data-slider-max="20" data-slider-step="1" data-slider-value="-14" 
-	data-slider-orientation="vertical" data-slider-selection="after" data-slider-tooltip="hide" />
-
 {{> color_buttons}}
 {{> canvas}}
 
@@ -27,69 +28,71 @@
 
 <template name="color_buttons">
 	<div class="row js-color-buttons">
-	    <div class="col-md-6 color-buttons">
-		<div class="col-xs-1 js-color-black">
+	    <div class="col-md-4 color-buttons">
+		<div class="col-xs-2 js-color-black">
 			<span>&nbsp;</span>
 		</div>
-		<div class="col-xs-1 js-color-blue">
+		<div class="col-xs-2 js-color-blue">
 			<span>&nbsp;</span>
 		</div>
-		<div class="col-xs-1 js-color-brown">
+		<div class="col-xs-2 js-color-brown">
 			<span>&nbsp;</span>
 		</div>
-		<div class="col-xs-1 js-color-cyan">
+		<div class="col-xs-2 js-color-cyan">
 			<span>&nbsp;</span>
 		</div>
-		<div class="col-xs-1 js-color-green">
+		<div class="col-xs-2 js-color-green">
 			<span>&nbsp;</span>
 		</div>
-		<div class="col-xs-1 js-color-grey">
-			<span>&nbsp;</span>
-		</div>
-		<div class="col-xs-1 js-color-orange">
-			<span>&nbsp;</span>
-		</div>
-		<div class="col-xs-1 js-color-pink">
+		<div class="col-xs-2 js-color-grey">
 			<span>&nbsp;</span>
 		</div>
 	    </div>
-	    <div class="col-md-6 color-buttons">
-		<div class="col-xs-1 js-color-chocolate">
+	    <div class="col-md-4 color-buttons">
+		<div class="col-xs-2 js-color-orange">
 			<span>&nbsp;</span>
 		</div>
-		<div class="col-xs-1 js-color-lime">
+		<div class="col-xs-2 js-color-pink">
 			<span>&nbsp;</span>
 		</div>
-		<div class="col-xs-1 js-color-darkblue">
+		<div class="col-xs-2 js-color-chocolate">
 			<span>&nbsp;</span>
 		</div>
-		<div class="col-xs-1 js-color-firebrick">
+		<div class="col-xs-2 js-color-lime">
 			<span>&nbsp;</span>
 		</div>
-		<div class="col-xs-1 js-color-purple">
+		<div class="col-xs-2 js-color-darkblue">
 			<span>&nbsp;</span>
 		</div>
-		<div class="col-xs-1 js-color-red">
+		<div class="col-xs-2 js-color-firebrick">
 			<span>&nbsp;</span>
 		</div>
-		<div class="col-xs-1 js-color-white">
+	    </div>
+	    <div class="col-md-4 color-buttons">
+		<div class="col-xs-2 js-color-purple">
 			<span>&nbsp;</span>
 		</div>
-		<div class="col-xs-1 js-color-yellow">
+		<div class="col-xs-2 js-color-red">
 			<span>&nbsp;</span>
 		</div>
-		<div class="col-xs-1 js-color-indigo">
+		<div class="col-xs-2 js-color-white">
 			<span>&nbsp;</span>
 		</div>
-		<div class="col-xs-1 js-color-navy">
+		<div class="col-xs-2 js-color-yellow">
 			<span>&nbsp;</span>
 		</div>
-		<div class="col-xs-1 js-color-orangered">
+		<div class="col-xs-2 js-color-indigo">
 			<span>&nbsp;</span>
 		</div>
-		<div class="col-xs-1 js-color-salmon">
+		<!-- div class="col-xs-2 js-color-navy">
 			<span>&nbsp;</span>
 		</div>
+		<div class="col-xs-2 js-color-orangered">
+			<span>&nbsp;</span>
+		</div>
+		<div class="col-xs-2 js-color-salmon">
+			<span>&nbsp;</span>
+		</div -->
 	    </div>
 	</div>
 </template>

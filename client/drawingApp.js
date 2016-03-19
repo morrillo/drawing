@@ -10,6 +10,7 @@ var strokeColor = "black";
 
 Meteor.startup( function() {
   canvas = new Canvas();
+  Session.set('straight-line', true);
 
   Deps.autorun( function() {
     var data = points.find({}).fetch();
@@ -125,53 +126,30 @@ Template.color_buttons.events({
 })
 
 Template.wall.events({
+  "click .straight-line": function() {
+        Session.set('straight-line', true);
+	},
+  "click .dashed-line": function() {
+        Session.set('straight-line', false);
+	},
 
   "click button.clear": function (event) {
     Meteor.call('clear', function() {
       canvas.clear();
     });
   },
-
-  //choose a color. Initialise the last vals, otherwise a stray line will appear.
-
-  "click button.red": function () {
-    lastX=0;
-    lastY=0;
-    strokeColor = "red";
-  },
-
-  "click button.black": function () {
-    lastX=0;
-    lastY=0;
-    strokeColor = "black";
-  },
-
-  "click button.white": function () {
-    lastX=0;
-    lastY=0;
-    strokeColor = "white";
-  },
-
-  "click button.blue": function () {
-    lastX=0;
-    lastY=0;
-    strokeColor = "blue";
-  },
-
-  "click button.green": function () {
-    lastX=0;
-    lastY=0;
-    strokeColor = "green";
-  },
-
   "click button.thicker": function () {
-
     thickness+=1;
-
   },
-
+  "click button.thicker10x": function () {
+    thickness+=10;
+  },
+  "click button.thinner10x": function () {
+    if (thickness - 11 > 0) {
+      thickness-=10;
+    }
+  },
   "click button.thinner": function () {
-    
     if (thickness > 0) {
       thickness-=1;
     }
