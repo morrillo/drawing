@@ -33,7 +33,6 @@ Canvas = function () {
 
       //to draw a line
 	if (straight_line) {
-		console.log('NO dibujando ...');
 	      svg.selectAll('line').data(data, function(d) { return d._id; })
 	      .enter().append('line')
 	      .attr('x1', function (d) { return d.x; })

@@ -9,6 +9,7 @@
 <template name="wall">
 
   <h1>{{title}}</h1>
+  <button class='export btn btn-default'>Export</button>
   <button class='clear btn btn-danger'>Clear</button>
   <button class='thicker10x btn btn-primary'>10x Thicker</button>
   <button class='thicker btn btn-info'>Thicker</button>
@@ -24,6 +25,9 @@
 
 <template name="canvas">
   <div id='canvas'></div>
+  <div id='export_canvas' hidden></div>
+  <div id='pngdataurl' hidden></div>
+  <canvas id="temp_canvas" height="600" width="800" hidden></canvas>
 </template>
 
 <template name="color_buttons">
